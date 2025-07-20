@@ -1,1 +1,31 @@
+<mvc:View
+  controllerName="eWitness.controller.Main"
+  xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+  xmlns="sap.m">
+
+  <Page title="eWitness - Digital Statement Portal">
+    <content>
+      <VBox class="sapUiSmallMargin">
+        <Button text="Add New Statement" press=".onAddStatement" />
+        <Table id="statementTable" inset="false" items="{/statements}">
+          <columns>
+            <Column><Text text="Date" /></Column>
+            <Column><Text text="Category" /></Column>
+            <Column><Text text="Action" /></Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{date}" />
+                <Text text="{category}" />
+                <Button text="View" press=".onViewDetails" />
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>
 
